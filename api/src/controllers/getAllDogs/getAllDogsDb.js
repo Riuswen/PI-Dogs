@@ -14,9 +14,9 @@ const getAllDogsDb = async () => {
             temperamentos: dog.Temperaments.map(temp => temp.name) 
         }));
 
-        return res.status(200).json(formattedDogs);
+        return formattedDogs;
     } catch (error) {
-        return res.status(500).json({ error: 'Error al obtener los perros de la base de datos' });
+        return error;
     }
 };
 
