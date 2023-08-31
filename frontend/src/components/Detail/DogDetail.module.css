@@ -1,4 +1,4 @@
-/* DogDetail.module.css */
+
 .dog-detail-container {
     display: flex;
     justify-content: center;
@@ -9,9 +9,9 @@
 .centeredHomeButton {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Alinea el botón en la parte superior */
+  align-items: flex-start; 
   margin-top: 20px;
-  margin-bottom: 20px; /* Agrega margen inferior para separar del contenido */
+  margin-bottom: 20px; 
 }
 
 .homeButton {
@@ -39,7 +39,7 @@
 
 .dog-detail-img {
     max-width: 100%; 
-    max-height: 335px; /* Altura máxima para imágenes horizontales */
+    max-height: 335px; 
     width: auto;
     height: auto;
     margin-top: 10px;
@@ -47,16 +47,16 @@
     transition: max-height 0.3s ease-in-out;
   }
 
-  /* Estilos para imágenes horizontales */
+
 .horizontal-img {
-    max-height: 335px; /* Altura para imágenes horizontales */
-    max-width: 500px; /* Ancho para imágenes horizontales */
+    max-height: 335px; 
+    max-width: 500px; 
   }
   
-  /* Estilos para imágenes verticales */
+  
   .vertical-img {
-    max-height: 500px; /* Altura para imágenes verticales */
-    max-width: 357px; /* Ancho para imágenes verticales */
+    max-height: 500px; 
+    max-width: 357px; 
   }
 
 .dog-detail-heading {

@@ -14,7 +14,7 @@ const NavBar = () => {
           <Link to="#" onClick={handleHomeClick}>Home</Link>
         </li>
         <li>
-          <Link to="/upload">Upload your dog</Link>
+          <Link to="/create-dog">Upload your dog</Link>
         </li>
       </ul>
     </nav>

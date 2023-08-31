@@ -3,16 +3,16 @@ import styles from './Card.module.css';
 import { Link } from 'react-router-dom';
 
 const defaultDogImages = {
-  15: 'https://upload.wikimedia.org/wikipedia/commons/a/a0/000_American_Pit_Bull_Terrier.jpg', // URL de la imagen por defecto para el id 15
-  125: 'https://www.petfinder.com/sites/default/files/images/content/great-pyrenees-detail-scaled.jpg', // URL de la imagen por defecto para el id 125
-  212: 'https://cdn.britannica.com/66/235666-050-751046D6/Saint-bernard-dog-st-bernard-standing-snow.jpg', // URL de la imagen por defecto para el id 212
+  15: 'https://upload.wikimedia.org/wikipedia/commons/a/a0/000_American_Pit_Bull_Terrier.jpg',
+  125: 'https://www.petfinder.com/sites/default/files/images/content/great-pyrenees-detail-scaled.jpg', 
+  212: 'https://cdn.britannica.com/66/235666-050-751046D6/Saint-bernard-dog-st-bernard-standing-snow.jpg', 
 };
 
 const Card = ({ id, name, image, temperaments, weight }) => { 
 
   const handleImageError = (e) => {
     const defaultImage = defaultDogImages[id] || 'https://www.nicepng.com/png/detail/221-2215035_404doge-doge-404.png';
-    e.target.src = defaultImage; // Reemplaza la imagen rota por la imagen por defecto
+    e.target.src = defaultImage;
   };
 
   return (
@@ -22,7 +22,7 @@ const Card = ({ id, name, image, temperaments, weight }) => {
           src={image}
           alt={name}
           className={styles.card__image}
-          onError={handleImageError} // Maneja el error de carga de imagen
+          onError={handleImageError}
         />
         <div className={styles.card__overlay}>
           <div className={styles.card__header}>

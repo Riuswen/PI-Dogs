@@ -6,10 +6,11 @@ function LandingPage() {
   return (
     <div className={styles['landing-page']}>
       <div className={styles.content}>
-      <h1 className={styles['animated-text']}>Conoce a tu mejor amigo</h1>
+      <h1 className={styles['animated-text']}>Love your</h1>
+      <h1 className={styles['animated-text']}>furry friend</h1>
       <div className={styles['button-container']}>
         <Link to="/home">
-        <button className={styles.button}>Comenzar</button>
+        <button className={styles.button}>Sniff Around!</button>
         </Link>
         </div>
       </div>
