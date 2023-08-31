@@ -1,15 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import styles from "./DogDetail.module.css"; 
 
 const DogDetail = () => {
     const { id } = useParams();
-     
+
     const allDogs = useSelector((state) => state.allDogs);
     const dogDetail = allDogs.find((dog) => dog.id === +id);
 
-   
     const isHorizontalImage = dogDetail && dogDetail.imagen && dogDetail.imagen.width > dogDetail.imagen.height;
 
     return (
@@ -17,6 +16,7 @@ const DogDetail = () => {
             {
                 dogDetail ? (
                     <div className={styles["dog-detail"]}>
+                        <Link to="/home">Go Back to Home</Link> 
                         <h1>{dogDetail.nombre}</h1>
                         <p>{`Id: ${dogDetail.id}`}</p>
                         <p>{`Name: ${dogDetail.nombre}`}</p>

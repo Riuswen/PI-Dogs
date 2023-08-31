@@ -3,15 +3,11 @@ import { Link } from 'react-router-dom';
 import style from './NavBar.module.css'; 
 
 const NavBar = () => {
-  const handleHomeClick = () => {
-    window.location.reload(); // Refresca la página
-  };
-
   return (
     <nav className={style.navBar}>
       <ul>
         <li>
-          <Link to="#" onClick={handleHomeClick}>Home</Link>
+          <Link to="/home">Home</Link> 
         </li>
         <li>
           <Link to="/create-dog">Upload your dog</Link>

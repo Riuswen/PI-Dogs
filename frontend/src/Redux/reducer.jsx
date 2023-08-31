@@ -1,8 +1,9 @@
-import { CREATE_DOG, GET_DOGS } from "./actions-types"
+import { CREATE_DOG, GET_DOGS, TEMPERAMENT, FILTER_TEMPERAMENT } from "./actions-types"
 
 const initialState = {
     allDogs: [],
-    dogs: []
+    dogs: [],
+    temperament: [],
 }
 
 const reducer = (state = initialState, actions) => {
@@ -10,25 +11,36 @@ const reducer = (state = initialState, actions) => {
         case GET_DOGS:
         return {
             ...state, 
-            allDogs: actions.payload
+            allDogs: actions.payload,
+            dogs: actions.payload
         }
-            case 'FILTER_TEMPERAMENT':
+        
+        case FILTER_TEMPERAMENT:
   const selectedTemperament = actions.payload;
-  const filteredDogs = state.allDogs.filter(dog => dog.temperaments.includes(selectedTemperament));
+  const filteredDogs = state.allDogs.filter(dog => dog.temperamento.includes(selectedTemperament));
   return {
     ...state,
-    allDogs: filteredDogs,
-        }
+    dogs: filteredDogs,
+  };
+
+
         case CREATE_DOG: 
         return {
             ...state,
             dogs: actions.payload
         }
-        default:
+       
+        case TEMPERAMENT:
             return {
-                ...state
+                ...state, temperament: actions.payload
             }
+
+            default:
+                return {
+                    ...state
+                }
     }  
+    
 }
 
 export default reducer;

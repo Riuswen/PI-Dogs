@@ -16,19 +16,26 @@ const getTemperamentsFromApi = async () => {
             })
         }
         });
-        await Temperament.bulkCreate(temperaments.map(temperamento => ({name: temperamento})));
-        return temperaments
+
+        const TemperamentsDB = await Promise.all(temperaments.map(async temperament => {
+            const [temp, created] = await Temperament.findOrCreate({where: {name:temperament}, default: {name:temperament}})
+            return temp;
+        })) 
+        return TemperamentsDB;
+
+        // await Temperament.bulkCreate(temperaments.map(temperamento => ({name: temperamento})));
+        // return temperaments
     } catch (error) {
         throw error;
     }
 }
 
-const saveTemperamentsToDb = async (temperaments) => {
-    try {
-       return temperamentsave;
-    } catch (error) {
-        throw error;
-    }
-}
+// const saveTemperamentsToDb = async (temperaments) => {
+//     try {
+//        return temperamentsave;
+//     } catch (error) {
+//         throw error;
+//     }
+// }
 
-module.exports = { getTemperamentsFromApi, saveTemperamentsToDb }; 
+module.exports = { getTemperamentsFromApi }; 

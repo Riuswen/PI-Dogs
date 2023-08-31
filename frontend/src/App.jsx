@@ -14,7 +14,7 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/detail/:id" element={<DogDetail />} />
         <Route path="/create-dog" element={<CreateDog/>}/>
-        {/* Agrega aquí otras rutas si es necesario */}
+        
       </Routes>
     </div>
   );
