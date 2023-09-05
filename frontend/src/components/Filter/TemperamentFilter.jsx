@@ -9,7 +9,7 @@ const TemperamentFilter = ({ onChange }) => {
   const handleTemperamentChange = (event) => {
     const selectedValue = event.target.value;
     setSelectedTemperament(selectedValue);
-    onChange(selectedValue); // Llamar a la función proporcionada por prop
+    onChange(selectedValue);
   };
 
   const temperamentos = useSelector(state => state.temperament);

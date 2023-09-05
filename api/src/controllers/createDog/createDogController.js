@@ -12,6 +12,7 @@ const createNewDog = async (dogData) => {
             altura,
             peso,
             longevidad,
+            isDB: true
         });
         if (dogData.temperaments && dogData.temperaments.length > 0) {
             const temperaments = await Temperament.findAll({

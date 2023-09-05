@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
 body,
 .landing-page {
@@ -8,7 +8,7 @@ body,
 }
 
 .landing-page {
-  background-image: url('../../assets/img/landingbg.webp');
+  background-image: url("../../assets/img/landingbg.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -30,27 +30,28 @@ body,
 }
 
 .text-container {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: flex-start;
-  }
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+}
 
 .animated-text {
-    margin: 0;
-    font-size: 6rem; 
-    color: rgba(255, 255, 255, 0.01);
-    background-image: url("../../assets/img/text.jpg");
-    background-repeat: repeat;
-    -webkit-background-clip: text;
-    animation: animateText 15s ease-in-out infinite;
-    text-transform: uppercase;
-    font-weight: 900;
-    justify-content: flex-start;
-  }
+  margin: 0;
+  font-size: 6rem;
+  color: rgba(255, 255, 255, 0.01);
+  background-image: url("../../assets/img/text.jpg");
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  animation: animateText 15s ease-in-out infinite;
+  text-transform: uppercase;
+  font-weight: 900;
+  justify-content: flex-start;
+}
 
-  @keyframes animateText {
-  0%, 100% {
+@keyframes animateText {
+  0%,
+  100% {
     background-position: left top;
   }
   25% {
@@ -73,8 +74,8 @@ body,
 .button {
   margin-top: 1em;
   padding: 0.5em 1em;
-  background-color: #FAFAFA;
-  color: #44322A;
+  background-color: #fafafa;
+  color: #44322a;
   border: none;
   border-radius: 15px;
   transition: background-color 0.3s ease;
@@ -82,7 +83,6 @@ body,
 }
 
 .button:hover {
-  background-color: #44322A;
-  color: #FAFAFA;
+  background-color: #44322a;
+  color: #fafafa;
 }
-  

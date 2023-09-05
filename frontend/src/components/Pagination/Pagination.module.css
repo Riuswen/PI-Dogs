@@ -1,37 +1,37 @@
 .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .paginationButton {
-    padding: 8px 16px;
-    border: none;
-    background-color: #FAFAFA;
-    color: #44322A;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 16px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .paginationButton:hover {
-    background-color: #44322A;
-    color: #FAFAFA
-  }
-  
-  .pageInfo {
-    margin: 0 20px;
-    font-size: 16px;
-    color: #333;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px !important; 
+}
 
-  .pageNumber {
-  color: #FAFAFA; /* Cambia el color aquí */
+.paginationButton {
+  padding: 8px 16px;
+  border: none;
+  background-color: #fafafa;
+  color: #44322a;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.paginationButton:hover {
+  background-color: #44322a;
+  color: #fafafa;
+}
+
+.pageInfo {
+  margin: 0 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.pageNumber {
+  color: #fafafa;
+  padding-left: 250px;
 }
 
 .totalPages {
-  color: #FAFAFA; /* Cambia el color aquí */
+  color: #fafafa; 
 }
-  
